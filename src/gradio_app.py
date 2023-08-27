@@ -17,4 +17,6 @@ with gr.Blocks() as demo:
     msg.submit(respond, [msg, chatbot], [msg, chatbot])
     clear.click(lambda: None, None, chatbot, queue=False)
 
-demo.launch()
+if __name__ == "__main__":
+    load_dotenv()
+    demo.launch()
